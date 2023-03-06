@@ -1,0 +1,440 @@
+/* Basic reset */
+
+:after:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #076802;
+    
+}
+
+.html,
+body {
+    margin: 0;
+}
+
+.page_body {
+    font-family: 'Crimson Pro', serif;
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+/*--- Navigationsbar ---*/
+header {
+    background: var(--background);
+    text-align: center;
+    z-index: 999;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+.logo {
+    height: 19%;
+    width: 19%;
+}
+
+.icons {
+    height: 20%;
+    width: 20%;
+}
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 200ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 50%;
+    text-transform: uppercase;
+    opacity: 0;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a:hover {
+    color: #c6dfc5;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/*---404 side--*/
+.overskrifter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+    margin: 0 10%;
+}
+
+.tekst {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 110%;
+    margin: 0 10%;
+}
+
+.panda {
+    height: 40%;
+    width: 40%;
+    margin: 0 30%;
+}
+
+
+
+/*--Forside--*/
+.forside {
+    height: 100%;
+    width: 100%;
+}
+
+.forsideoverskrift {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.tekstforside {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 110%;
+    margin: 0 20%;
+}
+
+.audience {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 130%;
+}
+
+.a-card {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-left: 3.3%;
+    
+}
+
+.foodpic {
+    height: 18%;
+    width: 18%;
+    
+}
+
+.f-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 4%;
+
+}
+
+
+.frugt {
+    height: 21%;
+    width: 21%;
+}
+
+.frugtkasser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1%;
+}
+
+.knap {
+    height: 12%;
+    width: 12%;
+}
+
+.knapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
+/*--Footer--*/
+.footer {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.footeroverskrift {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150%;
+    color: white;
+    
+    
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+/* Skjul pop-up indholdet som standard */
+.popUp {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(85, 184, 55, 0.5);
+  }
+  
+  /* Stil for pop-up indholdet */
+  .popUp-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* Stil for luk-knappen */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(240, 21, 21)12, 47, 47;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lykkehjul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .hjul {
+    height: 40%;
+    width: 40%;
+  }
+
+  #popUpBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 2% 3%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;
+    position: absolute;
+    top: 50%;
+    left: 74%;
+  }
+
+  .spin {
+    display: flex;
+    flex-direction: column;
+    margin: 0 9%;
+  }
+
+  #spinknap {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+  }
+
+  .lykketekst {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 130%;
+  }
+
+
+#output {
+    margin: 5% 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+}
+
+#pramie {
+    height: 60%;
+    width: 60%;
+}
+
+#bimbi {
+    height: 60%;
+    width: 60%;
+}
+
+#veganer {
+    height: 60%;
+    width: 60%;
+}
+.skjul {
+    display: none;
+  }
+  
+
+
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    /*--- Burgermenu ----*/
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 5fr auto minmax(800px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+        height: 50px;
+        width: 50px;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    nav ul {
+        display: flex;
+
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+
+    nav a {
+        font-size: 75%;
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #332E2E;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0%;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+        transform-origin: left;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    /*---Burgermenu slut---*/
+
+}
